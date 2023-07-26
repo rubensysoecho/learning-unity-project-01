@@ -13,6 +13,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, 1);    
+        // Without the speed, the vehicle moves 1 meter/second, now it moves 20 meters/second
+        /* The method Update() does execute every frame, but that depends on the power of the computer
+           so Time.deltaTime makes it executable every real time second. 
+        */
+        int speed = 20;
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 }
