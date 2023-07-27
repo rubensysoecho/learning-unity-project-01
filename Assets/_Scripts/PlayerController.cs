@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public float speed = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,6 @@ public class PlayerController : MonoBehaviour
         /* The method Update() does execute every frame, but that depends on the power of the computer
            so Time.deltaTime makes it executable every real time second. 
         */
-        int speed = 20;
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 }
